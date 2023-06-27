@@ -11,8 +11,8 @@ from flask_api import status
 app = Flask("Late Payment Predictor")
 api = Api(app=app)
 
-model = pickle.load(open('../saved_model/classmodel.pkl', 'rb'))
-scaler = pickle.load(open('../saved_model/scaling.pkl', 'rb'))
+model = pickle.load(open('./saved_model/classmodel.pkl', 'rb'))
+scaler = pickle.load(open('./saved_model/scaling.pkl', 'rb'))
 
 mappings = {'no': 0,
             'yes': 1,
@@ -100,4 +100,4 @@ api.add_resource(Classifier, '/api')
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
