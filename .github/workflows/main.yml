@@ -31,5 +31,5 @@ jobs:
                 REPOSITORY: latepaymentpredictor
                 IMAGE_TAG: ${{ github.sha }}
               run: |
-                docker build -t ${{ steps.login-ecr.outputs.registry }}/latepaymentpredictor:latest .
-                docker push ${{ steps.login-ecr.outputs.registry }}/latepaymentpredictor:latest
+                docker build -t ${{ steps.login-ecr.outputs.registry }}/latepaymentpredictor:${{ github.sha }} .
+                docker push ${{ steps.login-ecr.outputs.registry }}/latepaymentpredictor:${{ github.sha }}
