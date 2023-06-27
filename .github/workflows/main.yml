@@ -28,7 +28,7 @@ jobs:
             - name: Build, tag, and push docker image to Amazon ECR
               env:
                 REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-                REPOSITORY: late-payment-predictor
+                REPOSITORY: latepaymentpredictor
                 IMAGE_TAG: ${{ github.sha }}
               run: |
                 docker build -t $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG .
