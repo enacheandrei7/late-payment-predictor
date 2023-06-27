@@ -2,7 +2,7 @@ name: Build and Push Flask Image to AWS ECR
 
 on:
     push:
-        branches: [ master ]
+        branches: [ main ]
 
 jobs:
 
