@@ -9,8 +9,8 @@ import pandas as pd
 app = Flask("Late Payment Predictor")
 api = Api(app=app)
 
-model = pickle.load(open('./model/classmodel.pkl', 'rb'))
-scaler = pickle.load(open('./model/scaling.pkl', 'rb'))
+model = pickle.load(open('../saved_model/classmodel.pkl', 'rb'))
+scaler = pickle.load(open('../saved_model/scaling.pkl', 'rb'))
 
 mappings = {'no': 0,
             'yes': 1,
